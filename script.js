@@ -17,12 +17,19 @@ const sites = [
 ];
 
 const container = document.getElementById("container");
+container.style.display = "flex-box";
+container.style.marginLeft = "40vw";
+container.style.marginTop = "10vh";
+container.style.width = "300px";
+container.style.justifyContent = "center";
+container.style.alignItems = "center";
 
 function createLink(site) {
   const link = document.createElement("a");
   const img = document.createElement("img");
   link.setAttribute("href", site.address);
   img.setAttribute("src", site.logo);
+  img.setAttribute("width", "200px");
   link.appendChild(img);
   container.appendChild(link);
 }
